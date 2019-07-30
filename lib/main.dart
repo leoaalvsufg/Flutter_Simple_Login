@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Simple Login Demo',
+      title: 'Login',
       theme: new ThemeData(
         primarySwatch: Colors.blue
       ),
@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildBar(BuildContext context) {
     return new AppBar(
-      title: new Text("Simple Login Example"),
+      title: new Text("Login BioBoi"),
       centerTitle: true,
     );
   }
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
             child: new TextField(
               controller: _emailFilter,
               decoration: new InputDecoration(
-                labelText: 'Email'
+                labelText: 'E-mail'
               ),
             ),
           ),
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
             child: new TextField(
               controller: _passwordFilter,
               decoration: new InputDecoration(
-                labelText: 'Password'
+                labelText: 'Senha'
               ),
               obscureText: true,
             ),
@@ -121,15 +121,15 @@ class _LoginPageState extends State<LoginPage> {
         child: new Column(
           children: <Widget>[
             new RaisedButton(
-              child: new Text('Login'),
+              child: new Text('Usuário'),
               onPressed: _loginPressed,
             ),
             new FlatButton(
-              child: new Text('Dont have an account? Tap here to register.'),
+              child: new Text('Não tem uma conta? Registre-se aqui.'),
               onPressed: _formChange,
             ),
             new FlatButton(
-              child: new Text('Forgot Password?'),
+              child: new Text('Esqueceu a senha?'),
               onPressed: _passwordReset,
             )
           ],
@@ -140,11 +140,11 @@ class _LoginPageState extends State<LoginPage> {
         child: new Column(
           children: <Widget>[
             new RaisedButton(
-              child: new Text('Create an Account'),
+              child: new Text('Criar uma conta'),
               onPressed: _createAccountPressed,
             ),
             new FlatButton(
-              child: new Text('Have an account? Click here to login.'),
+              child: new Text('Tem uma conta? Clique aqui para acessar.'),
               onPressed: _formChange,
             )
           ],
@@ -156,16 +156,16 @@ class _LoginPageState extends State<LoginPage> {
   // These functions can self contain any user auth logic required, they all have access to _email and _password
 
   void _loginPressed () {
-    print('The user wants to login with $_email and $_password');
+    print('logar como $_email and $_password');
   }
 
   void _createAccountPressed () {
-    print('The user wants to create an accoutn with $_email and $_password');
+    print('criar uma conta $_email and $_password');
 
   }
 
   void _passwordReset () {
-    print("The user wants a password reset request sent to $_email");
+    print("resetar o password do email $_email");
   }
 
 
